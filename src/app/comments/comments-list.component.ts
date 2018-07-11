@@ -38,8 +38,10 @@ export class ListItemComponent implements OnInit, OnDestroy {
     }
 
     addComment(val: string) {
-        this.storageService.addComment(this.id, val);
-        this.commentVal = null;
+        if (this.commentVal.trim().length > 1 ) {
+            this.storageService.addComment(this.id, val);
+            this.commentVal = null;
+        }
     }
 
     ngOnDestroy() {

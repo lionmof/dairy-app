@@ -42,16 +42,20 @@ app-dairy {
 }
 .todolist-block {
     box-shadow: 0 0 2px rgba(0,0,0,0.5);
-    margin: 40px 0 0;
+    margin: 40px 0 40px;
     padding: 20px 20px;
     border-radius: 2px;
     min-height: 450px;
+    max-height: calc(100vh - 80px);
+    overflow: scroll;
 }
 .comments-block {
     box-shadow: 0 0 2px rgba(0,0,0,0.5);
-    margin: 40px 0 0;
+    margin: 40px 0 40px;
     padding: 20px 20px;
     border-radius: 2px;
+    max-height: calc(100vh - 80px);
+    overflow: scroll;
 }
 .comments-block h2 {
     margin-bottom: 50px;

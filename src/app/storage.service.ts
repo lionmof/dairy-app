@@ -7,7 +7,7 @@ import {Subject} from 'rxjs/Subject';
 @Injectable()
 export class StorageService {
     itemChanged = new Subject<Note[]>();
-    private items: Note[] = this.getStorage();
+    private items: Note[] = this.getStorage() || [];
     constructor() {
     }
     private getStorage() {
@@ -22,6 +22,7 @@ export class StorageService {
         return storage[index];
     }
     addItem(value: string) {
+        console.log(this.items);
         this.items.push(new Note(value, []));
         this.itemChanged.next(this.items.slice());
         localStorage.setItem('items', JSON.stringify(this.items.slice()));
