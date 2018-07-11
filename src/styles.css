@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+app-dairy {
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+.app-dairy .btn {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+.form-inline {
+    margin: 0 0 20px;
+}
+.form-inline .form-group {
+    display: flex;
+}
+.form-inline .form-group .form-control {
+    flex: 1;
+    margin: 0 20px 0 0;
+;}
+.btn-bg-green {
+    background: rgba(39,204,192);
+    color: #fff;
+}
+.info-block {
+    background: #2b2f3d;
+    padding: 28px 0 0 25px;
+    color: #ffffff;
+    min-height: 100vh;
+}
+.info-block a {
+    font-size: 36px;
+    color: #fff;
+    margin: 0 0 20px;
+}
+.info-block p {
+    font-size: 18px;
+    color: rgba(128,128,128);
+}
+.todolist-block {
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    margin: 40px 0 0;
+    padding: 20px 20px;
+    border-radius: 2px;
+    min-height: 450px;
+}
+.comments-block {
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    margin: 40px 0 0;
+    padding: 20px 20px;
+    border-radius: 2px;
+}
+.comments-block h2 {
+    margin-bottom: 50px;
+}
+.dairy-items {
+    border-bottom: 1px solid #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.dairy-items a {
+    color: #000;
+    position: relative;
+    flex: 1;
+    display: block;
+    padding: 15px 0 15px 0;
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+.dairy-items a.active:after {
+    content: '';
+    width: 2px;
+    left: -22px;
+    top: 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    background: red;
+}
+.dairy-items i {
+    background: rgba(39,204,192);
+    display: inline-block;
+    color: #ffffff;
+    padding: 4px 6px;
+    border-radius:  100px;
+    font-size: 13px;
+    font-style: normal;
+    position: relative;
+    top: -10px;
+    left: 50px;
+}
+.btn-red {
+    color: red;
+    border: 2px solid red;
+}
+.avatar {
+    width: 52px;
+    height: 52px;
+    background: #e6e6e6;
+    margin: 0 30px 0 0;
+    flex: 0 0 50px;
+}
+.form-comment .form-group {
+    display: flex;
+}
+.form-comment textarea {
+    height: 70px;
+    border-color: rgba(204,204,204);
+    border-radius: 0;
+}
+.comments-list .item {
+    display: flex;
+    border-bottom: 1px solid #f8f8f8;
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+}

@@ -1,0 +1,7 @@
+<div *ngFor="let item of dairyItems; let i = index" class="dairy-items">
+    <a [routerLink]="[i]"
+       routerLinkActive="active">
+        <span class="name">{{ item.name }} <i>{{item?.comments.length }}</i></span>
+    </a>
+    <button class="btn btn-red" (click)="onDeleteItem(i)">Delete</button>
+</div>

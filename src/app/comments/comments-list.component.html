@@ -1,0 +1,17 @@
+<h2 *ngIf="commentItem">
+    Comments #{{ commentsLength + 1 }}
+</h2>
+<div class="comments-list" *ngIf="commentItem">
+    <div class="item" *ngFor="let item of commentItem.comments; let i = index">
+        <div class="avatar" [ngStyle]="{'background-color': i % 2 === 0 ? '#f28f35' : '#495788' }"></div>
+        <div class="comment-item"> {{ item.comment }} </div>
+    </div>
+</div>
+
+<div class="form-comment">
+    <div class="form-group">
+        <div class="avatar"></div>
+        <textarea class="form-control" [(ngModel)]="commentVal" name="comment" ngModel
+                  (keyup.enter)="addComment(commentVal)"></textarea>
+    </div>
+</div>
