@@ -1,38 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
-app-dairy {
-    font-family: 'Open Sans';
+.app-dairy {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+}
+.app-dairy .container {
+    width: 1280px;
 }
 .app-dairy .btn {
     font-size: 16px;
-    font-family: 'Open Sans';
-    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
 }
 .form-inline {
-    margin: 0 0 20px;
+    margin: 0 0 9px;
 }
 .form-inline .form-group {
     display: flex;
 }
 .form-inline .form-group .form-control {
     flex: 1;
-    margin: 0 20px 0 0;
+    margin: 0 12px 0 0;
+    height: 38px;
 ;}
 .btn-bg-green {
-    background: rgba(39,204,192);
+    background: rgba(39,204,192,1);
     color: #fff;
+    min-width: 132px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.btn-bg-green:hover {
+    color: #ffffff;
+    background: rgba(39,204,192,0.8);
 }
 .info-block {
     background: #2b2f3d;
-    padding: 28px 0 0 25px;
+    padding: 16px 0 0 28px;
     color: #ffffff;
     min-height: 100vh;
 }
 .info-block a {
     font-size: 36px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
     color: #fff;
     margin: 0 0 20px;
 }
@@ -41,30 +53,48 @@ app-dairy {
     color: rgba(128,128,128);
 }
 .todolist-block {
+    padding: 2px;
+    
+    max-height: calc(100vh);
+    overflow: scroll;
+}
+.todolist-block-inner {
+    margin: 34px 0 34px;
     box-shadow: 0 0 2px rgba(0,0,0,0.5);
-    margin: 40px 0 40px;
-    padding: 20px 20px;
+    padding: 13px 17px 13px 32px;
     border-radius: 2px;
     min-height: 450px;
-    max-height: calc(100vh - 80px);
-    overflow: scroll;
+    
+}
+
+.todolist-block-inner h2 {
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 36px;
 }
 .comments-block {
-    box-shadow: 0 0 2px rgba(0,0,0,0.5);
-    margin: 40px 0 40px;
-    padding: 20px 20px;
-    border-radius: 2px;
-    max-height: calc(100vh - 80px);
+    padding: 2px;
+    max-height: 100vh;
     overflow: scroll;
 }
-.comments-block h2 {
-    margin-bottom: 50px;
+.comments-block-inner {
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    margin: 34px 0 34px;
+    padding: 13px 17px 13px 20px;
+    border-radius: 2px;
+    
+}
+.comments-block-inner h2 {
+    margin: 0 0 42px;
+    font-weight: 400;
+    font-size: 36px;
 }
 .dairy-items {
-    border-bottom: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(242,242,242,1);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     
 }
 .dairy-items a {
@@ -79,35 +109,50 @@ app-dairy {
 }
 .dairy-items a.active:after {
     content: '';
-    width: 2px;
-    left: -22px;
+    width: 5px;
+    left: -35px;
     top: 0;
     display: block;
     height: 100%;
     position: absolute;
-    background: red;
+    background: rgba(255,47,90,1);
 }
 .dairy-items i {
-    background: rgba(39,204,192);
+    background: rgba(39,204,192,1);
     display: inline-block;
     color: #ffffff;
-    padding: 4px 6px;
+    padding: 1px 8px;
     border-radius:  100px;
     font-size: 13px;
     font-style: normal;
     position: relative;
-    top: -10px;
-    left: 50px;
+    left: 46px;
+}
+.dairy-items a:hover, .dairy-items a:focus {
+    text-decoration: none;
+}
+.dairy-items .name {
+    width: 82%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
 }
 .btn-red {
-    color: red;
-    border: 2px solid red;
+    color: #FF305A;
+    border: 1px solid #FF305A;
+    min-width: 97px;
+    font-weight: 300;
+    transition: 0.25s;
+}
+.btn-red:hover {
+    color: #ffffff;
+    background: #FF305A;
 }
 .avatar {
     width: 52px;
     height: 52px;
     background: #e6e6e6;
-    margin: 0 30px 0 0;
+    margin: 0 14px 0 0;
     flex: 0 0 50px;
 }
 .form-comment .form-group {
@@ -115,12 +160,17 @@ app-dairy {
 }
 .form-comment textarea {
     height: 70px;
-    border-color: rgba(204,204,204);
+    border-color: rgba(204,204,204,1);
     border-radius: 0;
 }
 .comments-list .item {
     display: flex;
-    border-bottom: 1px solid #f8f8f8;
-    padding: 0 0 20px;
-    margin: 0 0 20px;
+    border-bottom: 1px solid rgba(242,242,242,1);
+    padding: 0 0 23px;
+    margin: 0 0 15px;
+}
+.comments-list .comment-item {
+    font-size: 12px;
+    color: rgba(102,102,102,1);
+    margin: -3px 0 0;
 }

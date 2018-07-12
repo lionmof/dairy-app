@@ -5,7 +5,7 @@ import {Note} from '../shared/models/note.model';
 import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
-    selector: 'app-list-item',
+    selector: 'app-comments',
     templateUrl: './comments-list.component.html',
     styleUrls: ['./comments-list.component.css']
 })

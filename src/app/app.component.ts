@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {StorageService} from './storage.service';
 
@@ -7,13 +7,9 @@ import {StorageService} from './storage.service';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
     constructor(private storageService: StorageService) {
-
-    }
-    ngOnInit() {
-
     }
     onSubmit(form: NgForm) {
         const value = form.value.search;

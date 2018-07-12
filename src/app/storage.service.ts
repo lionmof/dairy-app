@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Note} from './shared/models/note.model';
-import { Comment } from './shared/models/comment.model';
+import {Comment} from './shared/models/comment.model';
 
 import {Subject} from 'rxjs/Subject';
 
@@ -22,7 +22,6 @@ export class StorageService {
         return storage[index];
     }
     addItem(value: string) {
-        console.log(this.items);
         this.items.push(new Note(value, []));
         this.itemChanged.next(this.items.slice());
         localStorage.setItem('items', JSON.stringify(this.items.slice()));
@@ -35,7 +34,6 @@ export class StorageService {
     }
 
     deleteItem(index: number) {
-        console.log(index);
         this.items.splice(index, 1);
         this.itemChanged.next(this.items.slice());
         localStorage.setItem('items', JSON.stringify(this.items.slice()));

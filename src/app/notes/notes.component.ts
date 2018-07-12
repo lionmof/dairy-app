@@ -4,7 +4,7 @@ import {Subscription} from 'rxjs/Subscription';
 import {Note} from '../shared/models/note.model';
 
 @Component({
-    selector: 'app-dairy-items',
+    selector: 'app-notes',
     templateUrl: './notes.component.html',
     styleUrls: ['./notes.component.css']
 })
@@ -20,7 +20,6 @@ export class DairyItemsComponent implements OnInit, OnDestroy {
         this.subscription = this.storageService.itemChanged
             .subscribe(
                 (items) => {
-                    console.log(items);
                     this.dairyItems = items;
                 }
             );
